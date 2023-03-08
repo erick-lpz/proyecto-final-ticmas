@@ -1,13 +1,13 @@
 $(document).ready(function(){
     $(window).scroll(function(){
-        // sticky navbar on scroll script
+        // barra de navegación de desplazamiento
         if(this.scrollY > 20){
             $('.navbar').addClass("sticky");
         }else{
             $('.navbar').removeClass("sticky");
         }
         
-        // scroll-up button show/hide script
+        // botón de desplazamiento hacia arriba mostrar/ocultar
         if(this.scrollY > 500){
             $('.scroll-up-btn').addClass("show");
         }else{
@@ -15,25 +15,25 @@ $(document).ready(function(){
         }
     });
 
-    // slide-up script
+    // guion deslizable
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
+        // eliminando el desplazamiento suave al hacer clic en el botón deslizable hacia arriba
         $('html').css("scrollBehavior", "auto");
     });
 
     $('.navbar .menu li a').click(function(){
-        // applying again smooth scroll on menu items click
+        // aplicando nuevamente desplazamiento suave en los elementos del menú
         $('html').css("scrollBehavior", "smooth");
     });
 
-    // toggle menu/navbar script
+    // alternar secuencia de comandos de menú/barra de navegación
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
     });
 
-    // typing text animation script
+    // guión de animación de texto de escritura
     var typed = new Typed(".typing", {
         strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
         typeSpeed: 100,
